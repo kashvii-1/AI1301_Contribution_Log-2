@@ -38,10 +38,10 @@ Issue 1:
 **Match:** 
 The Pre Configuration Status Indication is already listed and a functioning feature in the Action Tile Container, so the status indication structure should be similar.
 
-**Temporary Update** - Was unable to contribute due to not feeling well over the past week, however did look at the code where I will be adding this new feature and consult the UI design style in the main repo's ReadMe.md. 
-
 **Plan:**
 Summary: 
 1. Design an UI mockup following the style guidelines listed in the directory of ReadMe in WSO2/Identity-Apps and get it approved by the product team.
 2. Upon approval of the design, I can began implementation. First I will integrate an API call or a hook within Action Tile module to retrieve the on/off button component's activity. 
 3. Then I will create a conditional ifEnabled component in the Action Tile UI that shows activty status whenever toggled on/off or inactive. 
+
+**Temporary Update** - Was unable to contribute due to not feeling well over the past week, however did look at the code where I will be adding this new feature and consult the UI design style in the main repo's ReadMe.md. 
