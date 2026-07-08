@@ -21,7 +21,7 @@ This issue interests me because:
 ### Environment Setup
 Installed Maven and WSO2's Identity Server (talks to the frontend and keep it running locally) — had it running in about 1.5 hours. I ran pnpm install and build in the app directory of WSO2's Identity-Apps Repo in VSCode while also starting the WSO2 Server to access the frontend interface. 
 
-Working branch: https://github.com/kashvii-1/identity-apps/pull/new/fix-issue-24305
+Working branch: https://github.com/kashvii-1/identity-apps/tree/fix-issue-22506
 
 ## Steps to Reproduce
 Issue 1:
@@ -70,8 +70,7 @@ Progress to be reached since currently am not able to visible see my changes int
 **Commits this week:**
 - 1455b0fdc9: Implemented Logic for "Active/Not Active" status to render onto website based upon active rule configuration form submitted by users. 
 
-**Proof of Commit: shown in the checkin form submission!**
-
+**Proof of Commit: (https://github.com/kashvii-1/identity-apps/tree/fix-issue-22506)
 
 
 
