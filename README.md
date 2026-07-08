@@ -3,8 +3,10 @@
 # Contribution [#22506]: UX issues in User's assigned Groups tab
 
 ## Problem Summary
-Contribution Number: #24305 Student: Kashvi Teli Issue: wso2/identity-appss#24305
-Status: [Phase II]
+Contribution Number: #24305 
+Student: Kashvi Teli 
+Issue: wso2/identity-appss#24305
+Status: [Phase III 50% PROGRESS REACHED]
 
 ## Why I Chose This Issue
 
@@ -44,4 +46,32 @@ Summary:
 2. Upon approval of the design, I can began implementation. First I will integrate an API call or a hook within Action Tile module to retrieve the on/off button component's activity. 
 3. Then I will create a conditional ifEnabled component in the Action Tile UI that shows activty status whenever toggled on/off or inactive. 
 
-**Temporary Update** - Was unable to contribute due to not feeling well over the past week, however did look at the code where I will be adding this new feature and consult the UI design style in the main repo's ReadMe.md. 
+**Temporary Update for June 30th Submission** - Was unable to contribute due to not feeling well over the past week, however did look at the code where I will be adding this new feature and consult the UI design style in the main repo's ReadMe.md. 
+
+### Progress For June 30th - July 8th 
+**What I built:**
+- Implemented the `renderActionConfiguredStatus` utility function using  TypeScript.
+- Added JSX mapping to support multi-status badge renders (Configured + Active/Inactive tags) nested inside a dedicated `.status-tags-container`.
+- Implemented new CSS styles for visibility of the new tags inside status-tag-container [rule configuration summary box]
+
+
+**Files I touched:**
+- `src/components/actions/actions.tsx`
+- `src/components/actions/actions.scss` 
+
+**Challenges faced:**
+- Issue: The browser renders failed to show the new status tags despite successful compilation cycles [no related or new bugs found that's allegedly blocking visibility, seems entirely an css nesting issue].
+- Resolution: I am currently stuck in progress as I am unable to visibly see changes and hence test my progress. Currently am finding the solution by testing out the cache settings and css nesting issues that don't cause compilation issues but refuse to show up on the website.]
+
+**Testing Notes**
+Progress to be reached since currently am not able to visible see my changes into the interface despite 0 compilation issues! 
+
+
+**Commits this week:**
+- 1455b0fdc9: Implemented Logic for "Active/Not Active" status to render onto website based upon active rule configuration form submitted by users. 
+
+**Proof of Commit: shown in the checkin form submission!**
+
+
+
+
