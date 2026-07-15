@@ -6,7 +6,7 @@
 Contribution Number: #24305 
 Student: Kashvi Teli 
 Issue: wso2/identity-appss#24305
-Status: [Phase III 50% PROGRESS REACHED]
+Status: [Phase III PROGRESS REACHED]
 
 ## Why I Chose This Issue
 
@@ -48,29 +48,41 @@ Summary:
 
 **Temporary Update for June 30th Submission** - Was unable to contribute due to not feeling well over the past week, however did look at the code where I will be adding this new feature and consult the UI design style in the main repo's ReadMe.md. 
 
-### Progress For June 30th - July 8th 
+### Progress For June 30th - July 8th [Continuation of July 8th-15 Below]
 **What I built:**
 - Implemented the `renderActionConfiguredStatus` utility function using  TypeScript.
 - Added JSX mapping to support multi-status badge renders (Configured + Active/Inactive tags) nested inside a dedicated `.status-tags-container`.
 - Implemented new CSS styles for visibility of the new tags inside status-tag-container [rule configuration summary box]
 
+### Progress For June 30th - July 8th 
+- Implemented test cases in "actions.test.tsx" for "configure-status-active-tag" feature (that I built as mentioned above) to check if active/inactive status renders
+- Tried to solve failed test cases that are caused due to environment set up issues.
+
 
 **Files I touched:**
 - `src/components/actions/actions.tsx`
-- `src/components/actions/actions.scss` 
+- `src/components/actions/actions.scss`
+- 'src/components/actions.test.tsx' [NEW]
 
 **Challenges faced:**
 - Issue: The browser renders failed to show the new status tags despite successful compilation cycles [no related or new bugs found that's allegedly blocking visibility, seems entirely an css nesting issue].
-- Resolution: I am currently stuck in progress as I am unable to visibly see changes and hence test my progress. Currently am finding the solution by testing out the cache settings and css nesting issues that don't cause compilation issues but refuse to show up on the website.]
+- Resolution: I was nesting the containers for configu_status_tag wrongly, I was meant to put the active/inactive container outside the sub component, and directly under the parent container. 
+
+- Issue [NEW] : The test cases are failing due to a complex monorepo/workspace that's causing Vitest (testing tool) in terminal to hault compilation before it reaches test logic.
+- Resolution : As I finish Phase III, my plan for resolution in Phase IV is to ensure my workspace is supported by adding the needed backend dependencies so Vitest compiles and runs my test. 
 
 **Testing Notes**
-Progress to be reached since currently am not able to visible see my changes into the interface despite 0 compilation issues! 
+1. Tests I made so far : I've made 2 unit tests using Vitest and @testing-library/react inside a new test file: src/components/actions.test.tsx (this mocks the container layout rendered via ActionTypesListingPage). These tests specifically target the dual-tag render logic inside the .status-tags-container where the first test checks the configured and "active" status tags, and second test checks the configured and "inactive" status tag.
+2. For Manual Verification, I manually verified via the browser UI that toggling the rule configurations correctly reflects both the "Configured" status badge alongside the newly styled "Active" or "Inactive" tags in the rule configuration summary box. 
 
+3. Why the Test is Failing Unrelatedly - due to my local workspace environment having package resolution issues flagged by Vitest [occured outside my written code for new feature], the tests are unable to be run through by Vitest unless I configure my environment to run cleanly. I plan to rehash on this in Phase IV
 
 **Commits this week:**
-- 1455b0fdc9: Implemented Logic for "Active/Not Active" status to render onto website based upon active rule configuration form submitted by users. 
+- 1455b0fdc9: Implemented Logic for "Active/Not Active" status to render onto website based upon active rule configuration form submitted by users.
+- 5d9235e433 — "Add unit test for actions status rendering"
 
-**Proof of Commit: (https://github.com/kashvii-1/identity-apps/tree/fix-issue-22506)
+**Proof of Commit for July 8-15th: (https://github.com/kashvii-1/identity-apps/tree/fix-issue-22506) 
+
 
 
 
