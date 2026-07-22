@@ -6,7 +6,7 @@
 Contribution Number: #24305 
 Student: Kashvi Teli 
 Issue: wso2/identity-appss#24305
-Status: [Phase III PROGRESS REACHED]
+Status: Phase III FINISHED
 
 ## Why I Chose This Issue
 
@@ -48,16 +48,20 @@ Summary:
 
 **Temporary Update for June 30th Submission** - Was unable to contribute due to not feeling well over the past week, however did look at the code where I will be adding this new feature and consult the UI design style in the main repo's ReadMe.md. 
 
+### Phase III (COMPLETION REACHED)
+
 ### Progress For June 30th - July 8th [Continuation of July 8th-15 Below]
 **What I built:**
 - Implemented the `renderActionConfiguredStatus` utility function using  TypeScript.
 - Added JSX mapping to support multi-status badge renders (Configured + Active/Inactive tags) nested inside a dedicated `.status-tags-container`.
 - Implemented new CSS styles for visibility of the new tags inside status-tag-container [rule configuration summary box]
 
-### Progress For June 30th - July 8th 
+### Progress For July 8th - July 15th 
 - Implemented test cases in "actions.test.tsx" for "configure-status-active-tag" feature (that I built as mentioned above) to check if active/inactive status renders
 - Tried to solve failed test cases that are caused due to environment set up issues.
 
+### Progress For July 15th - July 22nd
+- Tried to get my unit test to run however am running into issues between Vitest (the test runner) trying to resolve React in 'modules/forms/src/legacy/forms.tsx'. Module resolution that instructs Vitest on how to handle packages is in 'modules/unit-testing/vitest.config.ts' and I cannot edit that without potentially changing configuration for other unit tests. 
 
 **Files I touched:**
 - `src/components/actions/actions.tsx`
@@ -68,20 +72,21 @@ Summary:
 - Issue: The browser renders failed to show the new status tags despite successful compilation cycles [no related or new bugs found that's allegedly blocking visibility, seems entirely an css nesting issue].
 - Resolution: I was nesting the containers for configu_status_tag wrongly, I was meant to put the active/inactive container outside the sub component, and directly under the parent container. 
 
-- Issue [NEW] : The test cases are failing due to a complex monorepo/workspace that's causing Vitest (testing tool) in terminal to hault compilation before it reaches test logic.
-- Resolution : As I finish Phase III, my plan for resolution in Phase IV is to ensure my workspace is supported by adding the needed backend dependencies so Vitest compiles and runs my test. 
+- Issue [NEW] : The test cases are failing due to a complex monorepo/workspace that's causing Vitest (testing tool) in terminal to hault compilation before it reaches test code.
+- Resolution : Since the issue is occuring between a shared dependency package and Vitest due to Vitest's configuration, I may have to consult the repo maintainer to take further steps. 
 
 **Testing Notes**
 1. Tests I made so far : I've made 2 unit tests using Vitest and @testing-library/react inside a new test file: src/components/actions.test.tsx (this mocks the container layout rendered via ActionTypesListingPage). These tests specifically target the dual-tag render logic inside the .status-tags-container where the first test checks the configured and "active" status tags, and second test checks the configured and "inactive" status tag.
 2. For Manual Verification, I manually verified via the browser UI that toggling the rule configurations correctly reflects both the "Configured" status badge alongside the newly styled "Active" or "Inactive" tags in the rule configuration summary box. 
-
-3. Why the Test is Failing Unrelatedly - due to my local workspace environment having package resolution issues flagged by Vitest [occured outside my written code for new feature], the tests are unable to be run through by Vitest unless I configure my environment to run cleanly. I plan to rehash on this in Phase IV
-
+3. Final Conclusion for Unit Test and Why It Failed Due to Factors Outside my Scope:
+   > The test runner Vitest cannot load a shared workspace package [cannot resolve React] when compiling 'modules/forms/src/legacy/forms.tsx' despite React being installed and hoisted locally
+   > The reason why the dependency package is unable to be resolved is due to how the vitest.config.ts file is configured for the entire repo's testing.
+   > I cannot edit the vitest.config.ts file since lots of tests depend on it, but cannot get my local environment to run my unit test either due to problems between my test runner and dependency package. [Attempted to bug for 2 hours but no avail].
+ 
 **Commits this week:**
 - 1455b0fdc9: Implemented Logic for "Active/Not Active" status to render onto website based upon active rule configuration form submitted by users.
 - 5d9235e433 — "Add unit test for actions status rendering"
 
-**Proof of Commit for July 8-15th: (https://github.com/kashvii-1/identity-apps/tree/fix-issue-22506) 
 
 
 
