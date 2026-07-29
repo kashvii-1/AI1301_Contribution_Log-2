@@ -6,7 +6,7 @@
 Contribution Number: #24305 
 Student: Kashvi Teli 
 Issue: wso2/identity-appss#24305
-Status: Phase III FINISHED
+Status: Phase IV in PROGRESS
 
 ## Why I Chose This Issue
 
@@ -86,6 +86,9 @@ Summary:
 **Commits this week:**
 - 1455b0fdc9: Implemented Logic for "Active/Not Active" status to render onto website based upon active rule configuration form submitted by users.
 - 5d9235e433 — "Add unit test for actions status rendering"
+
+**Phase IV UPDATE!!**
+I am currently reaching out to the design team to communicate about alterations and final design before I can push my PR! Currently I am working on creating a PR ready space and aligntment layout of the "Active" status now that all logic and test implementation is done.
 
 
 
