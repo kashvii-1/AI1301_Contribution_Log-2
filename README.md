@@ -1,6 +1,6 @@
 # AI1301_Contribution_Log-2
 
-# Contribution [#24305]: UX issues in User's assigned Groups tab
+# Contribution [#24305]: Enhance Action Tile View with Status Indicators
 
 ## Problem Summary
 Contribution Number: #24305 
