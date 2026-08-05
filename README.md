@@ -6,7 +6,7 @@
 Contribution Number: #24305 
 Student: Kashvi Teli 
 Issue: wso2/identity-appss#24305
-Status: Phase IV in PROGRESS
+Status: Phase IV COMPLETED!! 
 
 ## Why I Chose This Issue
 
@@ -88,9 +88,9 @@ Summary:
 - 5d9235e433 — "Add unit test for actions status rendering"
 
 **Phase IV UPDATE!!**
-I am currently reaching out to the design team to communicate about alterations and final design before I can push my PR! Currently I am working on creating a PR ready space and aligntment layout of the "Active" status now that all logic and test implementation is done.
+I have currently pushed my PR to WSO2-Identity-Apps! Here is the Link to the PR:
 
-
+Here is the link to the original issue listed in their main repo, WSO2-IS
 
 
 
