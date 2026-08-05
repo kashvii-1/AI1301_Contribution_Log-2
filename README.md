@@ -5,7 +5,7 @@
 ## Problem Summary
 Contribution Number: #24305 
 Student: Kashvi Teli 
-Issue: wso2/identity-appss#24305
+Issue:[ wso2/identity-appss#24305] (https://github.com/kashvii-1/identity-apps/tree/fix-issue-24305)
 Status: Phase IV COMPLETED!! 
 
 ## Why I Chose This Issue
@@ -88,9 +88,9 @@ Summary:
 - 5d9235e433 — "Add unit test for actions status rendering"
 
 **Phase IV UPDATE!!**
-I have currently pushed my PR to WSO2-Identity-Apps! Here is the Link to the PR:
+I have currently pushed my PR to WSO2-Identity-Apps! Here is the Link to the PR: https://github.com/wso2/identity-apps/pull/10595
 
-Here is the link to the original issue listed in their main repo, WSO2-IS
+Here is the link to the original issue listed in their main repo, WSO2-IS: https://github.com/wso2/product-is/issues/24305 
 
 
 
